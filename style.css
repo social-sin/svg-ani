@@ -24,15 +24,18 @@ body {
 #mask-lines path {
   fill: none;
   stroke: white; /* white = reveal */
-   stroke-width: 25–40;
-  filter: blur(0.5px); /* slight softness */
+
+  stroke-width: 30; /* ✅ pick ONE value (try 25–40 manually) */
+
   stroke-linecap: round;
   stroke-linejoin: round;
+
+  filter: blur(0.5px); /* optional softness */
 }
 
-.final {
+/*.final {
   opacity: 0;
-}
+}*/
 
 @keyframes draw {
   to {

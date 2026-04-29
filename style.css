@@ -13,19 +13,10 @@ body {
   width: 600px;
 }
 
-/*.mask {
-  fill: none;
+.mask {
+  fill: none; /* 🚨 important */
   stroke: #52322c;
   stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-} */
-
-#mask-lines path {
-  fill: none;
-  stroke: white; /* white = reveal */
-   stroke-width: 25–40;
-  filter: blur(0.5px); /* slight softness */
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -36,7 +27,7 @@ body {
 
 @keyframes draw {
   to {
-    stroke-dashoffset: 1;
+    stroke-dashoffset: 0;
   }
 }
 

@@ -16,8 +16,8 @@ body {
   fill: none;
   stroke: white;
 
-  stroke-width: 20;
-  filter: none;
+  stroke-width: 4;
+  filter: blur(1.2px);
 
   stroke-linecap: round;
   stroke-linejoin: round;

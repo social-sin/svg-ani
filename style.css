@@ -11,23 +11,36 @@ body {
   width: 600px;
 }
 
-/* 🔥 THIS CONTROLS THE “FILL FEEL” */
+/* ✏️ pen stroke feel */
 #mask-lines path {
   fill: none;
   stroke: white;
 
-  stroke-width: 4;
-  filter: blur(1.2px);
-
+  stroke-width: 2.2; /* thinner = more elegant */
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  /* optional softness */
-  filter: blur(0.5px);
+  /* ❌ REMOVE blur completely */
+  filter: none;
+
+  /* animation setup */
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+
+  animation: draw var(--dur) cubic-bezier(.65,0,.35,1) forwards;
 }
 
+/* ✏️ subtle pressure variation */
 @keyframes draw {
-  to {
+  0% {
+    stroke-dashoffset: var(--len);
+    stroke-width: 1.6;
+  }
+  50% {
+    stroke-width: 2.6;
+  }
+  100% {
     stroke-dashoffset: 0;
+    stroke-width: 2.2;
   }
 }

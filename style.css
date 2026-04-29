@@ -16,7 +16,8 @@ body {
   fill: none;
   stroke: white;
 
-  stroke-width: 30; /* ← adjust this (20–50 range) */
+  stroke-width: 20;
+  filter: none;
 
   stroke-linecap: round;
   stroke-linejoin: round;

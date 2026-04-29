@@ -1,11 +1,9 @@
 body {
   margin: 0;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: #f5f5f5;
 }
 
@@ -13,26 +11,25 @@ body {
   width: 600px;
 }
 
-/*.mask {
-  fill: none;
-  stroke: #52322c;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-} */
-
+/* 🔥 THIS CONTROLS THE “FILL FEEL” */
 #mask-lines path {
   fill: none;
-  stroke: white; /* white = reveal */
+  stroke: white;
 
-  stroke-width: 30; /* ✅ pick ONE value (try 25–40 manually) */
+  stroke-width: 30; /* ← adjust this (20–50 range) */
 
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  filter: blur(0.5px); /* optional softness */
+  /* optional softness */
+  filter: blur(0.5px);
 }
 
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 /*.final {
   opacity: 0;
 }*/

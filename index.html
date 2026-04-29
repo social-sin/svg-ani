@@ -28,6 +28,30 @@
   <meta name="theme-color" content="#fafafa"/>
 </head>
 
+  <script>
+window.onload = () => {
+  const paths = document.querySelectorAll('.mask');
+
+  console.log("paths found:", paths.length);
+
+  let delay = 0;
+
+  paths.forEach((path, i) => {
+    const length = path.getTotalLength();
+
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+
+    const duration = length / 120;
+
+    path.style.animation = `draw ${duration}s ease forwards`;
+    path.style.animationDelay = `${delay}s`;
+
+    delay += duration * 0.6;
+  });
+};
+</script>
+  
 <body>
   <header></header>
   <main>
@@ -92,11 +116,5 @@
   </main>
   <footer></footer>
 </body>
-
-<script>
-document.querySelectorAll('.mask').forEach((path, i) => {
-  path.style.animationDelay = `${i * 0.3}s`;
-});
-</script>
   
 </html>

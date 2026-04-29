@@ -16,7 +16,7 @@ body {
 .mask {
   fill: none; /* 🚨 important */
   stroke: #52322c;
-  stroke-width: 4;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }

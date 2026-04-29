@@ -40,7 +40,7 @@ window.onload = () => {
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
 
-    const duration = length / 300;
+    const duration = (length / 300) * (0.9 + Math.random() * 0.2);
 
     path.style.animation = `draw ${duration}s linear forwards`;
     path.style.animationDelay = `${delay}s`;

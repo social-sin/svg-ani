@@ -13,10 +13,19 @@ body {
   width: 600px;
 }
 
-.mask {
-  fill: none; /* 🚨 important */
+/*.mask {
+  fill: none;
   stroke: #52322c;
   stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+} */
+
+#mask-lines path {
+  fill: none;
+  stroke: white; /* white = reveal */
+   stroke-width: 25–40;
+  filter: blur(0.5px); /* slight softness */
   stroke-linecap: round;
   stroke-linejoin: round;
 }

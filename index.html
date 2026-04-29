@@ -271,14 +271,9 @@
   <footer></footer>
 </body>
 
-  <script>
-document.querySelectorAll('.mask').forEach(path => {
-  const length = path.getTotalLength();
-
-  path.style.strokeDasharray = length;
-  path.style.strokeDashoffset = length;
-
-  path.style.animation = "draw 2s ease forwards";
+<script>
+document.querySelectorAll('.mask').forEach((path, i) => {
+  path.style.animationDelay = `${i * 0.3}s`;
 });
 </script>
   

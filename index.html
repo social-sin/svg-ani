@@ -28,7 +28,7 @@
   <meta name="theme-color" content="#fafafa"/>
 </head>
 
-  <script>
+<script>
 window.onload = () => {
   const paths = document.querySelectorAll('.mask');
 
@@ -49,6 +49,11 @@ window.onload = () => {
 
     delay += duration * 0.6;
   });
+  
+  const totalTime = delay;
+
+  document.querySelector('.final').style.animation =
+    `revealFill 0.5s ease forwards ${totalTime}s`;
 };
 </script>
 

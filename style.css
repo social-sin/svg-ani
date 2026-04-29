@@ -14,7 +14,7 @@ body {
 }
 
 .mask {
-  fill: none;
+  fill: #52322c;
   stroke: #52322c;
   stroke-width: 4;
   stroke-linecap: round;

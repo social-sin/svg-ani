@@ -42,10 +42,10 @@ window.onload = () => {
 
     const duration = length / 300;
 
-    path.style.animation = `draw ${duration}s ease forwards`;
+    path.style.animation = `draw ${duration}s linear forwards`;
     path.style.animationDelay = `${delay}s`;
 
-    delay += duration * 0.25;
+    delay += duration;
   });
 };
 </script>
